@@ -1,4 +1,4 @@
-def (projectKey,projectName,loginKey,coveragePath,sonarHost){
+def call(projectKey,projectName,loginKey,coveragePath,sonarHost){
     def scannerHome = tool 'SonarScanner';
                   withSonarQubeEnv("SonarQube-Localhost") {
                   sh "${tool("SonarScanner")}/bin/sonar-scanner \
