@@ -1,4 +1,4 @@
-def call(){
+def call(projectKey){
     withCredentials([usernameColonPassword(credentialsId: 'sonar-access', variable: 'USERPASS')]) {
       sh '''
           set x
