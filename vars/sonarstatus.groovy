@@ -1,4 +1,5 @@
 def call(projectKey){
+    def qg_status = null
     withCredentials([usernameColonPassword(credentialsId: 'sonar-access', variable: 'USERPASS')]) {
       sh '''
           set x
