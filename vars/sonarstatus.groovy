@@ -3,7 +3,7 @@ def call(projectKey){
     echo "${projectKey}"
     withCredentials([usernameColonPassword(credentialsId: 'sonar-access', variable: 'USERPASS')]) {
       sh """
-           echo "${projectKey}"
+           echo "\${projectKey}"
            set x
            sleep 15s
            status="OK"
