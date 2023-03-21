@@ -4,6 +4,7 @@ def call(projectKey){
     withCredentials([usernameColonPassword(credentialsId: 'sonar-access', variable: 'USERPASS')]) {
       sh """
            echo "${projectKey}"
+           echo "${USERPASS}"
        """
 }
 }
