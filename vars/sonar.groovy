@@ -14,3 +14,4 @@ def call(projectKey,projectName,loginKey,coveragePath,sonarHost){
 	 -Dsonar.javascript.lcov.reportPaths=${coveragePath} \
          -Dsonar.login=${loginKey}"
 }
+}
