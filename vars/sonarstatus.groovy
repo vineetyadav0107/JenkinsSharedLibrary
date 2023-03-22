@@ -8,8 +8,8 @@ def call(projectKey){
            set x
            sleep 15s
            status="OK"
-           qg_status=curl --user ${USERPASS} https://ci-builds.compunnel.com/sonar/api/qualitygates/project_status?projectKey=${projectKey}  | jq -r '.projectStatus.status'
-           echo "${qg_status}"
        """
+       def res = sh(script: 'curl --user ${USERPASS} https://ci-builds.compunnel.com/sonar/api/qualitygates/project_status?projectKey=${projectKey}', returnStdout: true)
+        echo "${res}"
 }
 }
