@@ -10,6 +10,6 @@ def call(projectKey){
            status="OK"
        """
        def res = sh(script: "curl --user ${USERPASS} https://ci-builds.compunnel.com/sonar/api/qualitygates/project_status?projectKey=${projectKey} | jq -r '.projectStatus.status'", returnStdout: true)
-        echo "${res}"
+       return res
 }
 }
